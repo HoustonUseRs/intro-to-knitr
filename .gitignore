@@ -1,0 +1,8 @@
+# IDE
+.idea
+
+# Bower
+bower_components
+
+# System
+.DS_Store
