@@ -1,7 +1,5 @@
 # knitr
 
-[HRUG Meetup](http://www.meetup.com/houstonr/events/227950530/)
-
 # Why Knitr
 * results need to be reproducible
 * Documentation of code
