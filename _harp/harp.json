@@ -1,9 +1,10 @@
 {
   "globals": {
-    "baseUrl": "https://houstonusers.github.io/intro-to-knitr/",
+    "baseUrl": "https://houstonusers.github.io/intro-to-knitr",
     "name": "Intro to Knitr",
     "slack": "https://hrug.slack.com",
     "eventPage": "http://www.meetup.com/houstonr/events/227950530/",
-    "page": "https://houstonusers.github.io"
+    "page": "https://houstonusers.github.io",
+    "githubRepo": "https://github.com/houstonusers/intro-to-knitr"
   }
 }
