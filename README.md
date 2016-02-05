@@ -1,5 +1,3 @@
-# knitr
-
 # Why Knitr
 * results need to be reproducible
 * Documentation of code
