@@ -32,6 +32,27 @@ ul.nav-docs{
   }
 }
 
+.nav > li .nav {
+  display: none;
+  font-size: 0.8em;
+  > li > a {
+    padding: 5px 20px;
+  }
+
+}
+.nav-pills {
+  .nav-pills > li.active > a,
+  .nav-pills > li.active > a:hover,
+  .nav-pills > li.active > a:focus {
+    background: transparent;
+    color: @brand-primary;
+    border-top: 1px dotted lighten(@brand-primary, 25%);
+    border-bottom: 1px dotted lighten(@brand-primary, 25%);
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
+}
+
 .page-not-found {
   h3 {
     display: inline-block;
@@ -39,6 +60,7 @@ ul.nav-docs{
 }
 
 article.article-docs{
+
   h1, h2, h3, h4, h5, h6{
     margin: 1em 0;
     font-style: italic;
@@ -47,7 +69,10 @@ article.article-docs{
 
   h1{
     font-size: 3rem;
+    padding-top: 2em;
+    margin-top: -1em;
   }
+
   h2{
     font-size: 2.6rem;
   }
@@ -59,5 +84,18 @@ article.article-docs{
   }
   p{
     margin: 1em 0;
+  }
+}
+
+@media (min-width: @grid-float-breakpoint-max) {
+  .nav.fixed {
+    position: fixed;
+    width: inherit;
+    box-sizing: border-box;
+    padding: inherit;
+    margin: inherit;
+  }
+  .nav > li.active .nav {
+    display: block;
   }
 }
