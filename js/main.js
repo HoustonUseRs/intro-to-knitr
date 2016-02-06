@@ -6,7 +6,7 @@ function iframeLoaded(iframe) {
 (function(window){
 
   document.onreadystatechange = function () {
-    if (document.readyState == "complete") {
+    if (document.readyState == "interactive") {
       initialize();
     }
   }
