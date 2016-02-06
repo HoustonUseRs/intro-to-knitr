@@ -1,0 +1,21 @@
+article.article-docs
+  .row
+    h1 Crickets
+    .col-sm-6
+      h2 Code
+      pre
+        code
+          include ./examples/crickets/includable.Rmd
+    .col-sm-6
+      h2 Output
+      iframe(src="#{baseUrl}/examples/crickets/", frameborder="none", width="100%", onload="iframeLoaded(this)")
+  .row
+    h1 Slides
+    .col-sm-6
+      h2 Code
+      pre
+        code
+          include ./examples/slides/includable.Rmd
+    .col-sm-6
+      h2 Output
+      iframe.zoom-frame(src="#{baseUrl}/examples/slides/", frameborder="none", onload="iframeLoaded(this)")

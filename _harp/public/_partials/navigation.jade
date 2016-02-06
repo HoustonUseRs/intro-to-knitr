@@ -1,8 +1,10 @@
 ul.nav.nav-pills.nav-stacked.nav-docs.fixed
-    li(class="#{ current.source == 'index' ? 'active' : '' }")
-        a(href="#{baseUrl}/") Notes
-        ul.nav.nav-pills.nav-stacked(id="toc-holder")
-    li
-        h1 Examples
-    li
-        h1 Slides
+  li(class="#{ current.source == 'index' ? 'active' : '' }")
+    a(href="#{baseUrl}/") Notes
+    ul.nav.nav-pills.nav-stacked
+  li(class="#{ current.source == 'view-examples' ? 'active' : '' }")
+    a(href="#{baseUrl}/view-examples") Examples
+    ul.nav.nav-pills.nav-stacked
+  li(class="#{ current.source == 'view-slides' ? 'active' : '' }")
+    a(href="#{baseUrl}/view-slides") Slides
+    ul.nav.nav-pills.nav-stacked
