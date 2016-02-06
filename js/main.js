@@ -1,3 +1,8 @@
+function iframeLoaded(iframe) {
+  iframe.height = "";
+  iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+}
+
 (function(window){
 
   document.onreadystatechange = function () {
@@ -8,7 +13,7 @@
 
   function initialize(){
     setUpExternalLinks();
-    setUpToc('.article-docs', '#toc-holder');
+    setUpToc('.article-docs', 'ul.nav.nav-pills.nav-stacked');
   }
 
   function setUpToc(articleSelector, tocSelector){
@@ -20,7 +25,7 @@
     }());
 
     var headings = document.querySelectorAll(articleSelector + ' h1');
-    var tocHolder = document.querySelector(tocSelector);
+    var tocHolder = document.querySelector('.active > ' + tocSelector);
 
     var toc = _.map(headings, function(heading){
       var linkInfo = makeHeadingNavigable(heading);
@@ -46,7 +51,7 @@
     }
 
     function setActiveItem(clickEvent){
-      var currentActive = document.querySelector(tocSelector + ' li.active');
+      var currentActive = document.querySelector('.active > ' + tocSelector + ' li.active');
       if(currentActive){
         currentActive.classList.remove('active');        
       }
